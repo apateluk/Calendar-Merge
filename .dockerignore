@@ -19,3 +19,5 @@ coverage.xml
 .pytest_cache
 .hypothesis
 *.md
+.venv
+.DS_Store
