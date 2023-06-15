@@ -1,0 +1,11 @@
+attrs==23.1.0
+certifi==2023.5.7
+charset-normalizer==3.1.0
+ics @ git+https://github.com/ics-py/ics-py.git@19884443f7bccea8a1c9f93d8f2a4b15321ac421
+ics-vtimezones==2020.1
+idna==3.4
+importlib-resources==1.5.0
+python-dateutil==2.8.2
+requests==2.31.0
+six==1.16.0
+urllib3==2.0.3
