@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["python3", "-m" ,"calmerge"]
+CMD ["python3", "-m" ,"app"]

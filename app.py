@@ -6,6 +6,7 @@ import threading
 from time import sleep
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
+from flask import Flask
 
 cal_filename = "/data/calendars.txt"
 api_key = ""
@@ -20,13 +21,13 @@ class MyServer(BaseHTTPRequestHandler):
 
         if "key" not in query_paramaters:
             print("Key does not exist")
-            self.send_response(400)
+            self.send_response(401)
             self.end_headers()
             return
 
         if query_paramaters["key"][0] != api_key:
             print("Invalid Key")
-            self.send_response(400)
+            self.send_response(401)
             self.end_headers()
             return
 
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     
     if os.path.exists(cal_filename) is not True:
         print("File {} does not exist".format(cal_filename))
-        sys.exit(1)
+        cal_filename = "example_calendar.txt"
     
     api_key = os.environ.get('CALMERGE_API_KEY')
     if (api_key is None):

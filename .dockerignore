@@ -21,3 +21,4 @@ coverage.xml
 *.md
 .venv
 .DS_Store
+.env
