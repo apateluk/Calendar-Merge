@@ -67,6 +67,7 @@ def calender_merge_thread(name):
             with open(p, 'w') as f:
                 f.writelines(cal)
             f.close()
+            cal.events.clear()
             cal_lock.release()
 
         sleep(60*30) #Sleep for 30mins
