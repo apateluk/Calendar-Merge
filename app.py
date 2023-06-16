@@ -6,7 +6,6 @@ import threading
 from time import sleep
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
-from flask import Flask
 
 cal_filename = "/data/calendars.txt"
 api_key = ""
